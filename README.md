@@ -1,4 +1,4 @@
-# Entrega 5
+# Entrega 6
 
 ## Módulo Incidentes
 
@@ -9,7 +9,7 @@ https://moduloincidentes.grafana.net/public-dashboards/d8e6299427524a8dbd9a433c7
 
 ### API REST
 ```
-https://modulo-incidentes-entrega-5-busv.onrender.com
+https://modulo-incidentes-entrega-6.onrender.com
 ```
 Se implementan los siguientes endpoints:
 
