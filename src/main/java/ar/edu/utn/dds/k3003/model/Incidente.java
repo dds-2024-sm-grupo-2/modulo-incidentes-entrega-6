@@ -20,12 +20,14 @@ public class Incidente {
     private Long id;
 
     @Column(name = "estadoIncidente")
+    @Enumerated(EnumType.STRING)
     private EstadoIncidenteEnum estadoIncidente;
 
     @Column(name = "heladeraId")
     private Long heladeraId;
 
     @Column(name = "tipoIncidente")
+    @Enumerated(EnumType.STRING)
     private TipoIncidenteEnum tipoIncidente;
 
     @Getter
