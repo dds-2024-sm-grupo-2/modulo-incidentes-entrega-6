@@ -68,7 +68,7 @@ public class WebApp {
 
         //Listar Incidentes
         app.get("/listar_fallas/{heladeraId}", incidentesController::listarPorHeladera);
-        
+
         // Endpoint para eliminar todos los incidentes
         app.delete("/incidentes", incidentesController::eliminar);
 
