@@ -55,4 +55,11 @@ public class IncidenteRepository {
         entityManager.createQuery("DELETE FROM Incidente").executeUpdate();
         entityManager.getTransaction().commit();
     }
+
+    public List<Incidente> findByHeladeraId(Long heladeraId) {
+        return entityManager.createQuery("SELECT i FROM Incidente i WHERE i.heladeraId = :heladeraId", Incidente.class)
+                .setParameter("heladeraId", heladeraId)
+                .getResultList();
+    }
+
 }

@@ -143,4 +143,12 @@ public class Fachada {
 
         return incidenteMapper.map(incidente);
     }
+
+    public List<IncidenteDTO> listarIncidentesPorHeladera(Long heladeraId) {
+        List<Incidente> incidentes = this.incidenteRepository.findByHeladeraId(heladeraId);
+        return incidentes.stream()
+                .map(incidenteMapper::map)
+                .collect(Collectors.toList());
+    }
+
 }

@@ -59,4 +59,16 @@ public class IncidenteController {
             throw new NoSuchElementException(ex.getLocalizedMessage());
         }
     }
+
+    public void listarPorHeladera(Context context) {
+        var heladeraId = context.pathParamAsClass("heladeraId", Long.class).get();
+        try {
+            var incidentes = this.fachada.listarIncidentesPorHeladera(heladeraId);
+            context.json(incidentes);
+            context.status(HttpStatus.OK);
+        } catch (Exception ex) {
+            throw new RuntimeException("Error al listar incidentes: " + ex.getMessage());
+        }
+    }
+
 }

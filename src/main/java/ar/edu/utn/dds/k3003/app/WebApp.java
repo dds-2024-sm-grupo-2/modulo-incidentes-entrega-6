@@ -66,6 +66,9 @@ public class WebApp {
         app.get("/incidentes/{id}", incidentesController::obtener);
         app.patch("/incidentes/{id}", incidentesController::actualizar);
 
+        //Listar Incidentes
+        app.get("/listar_fallas/{heladeraId}", incidentesController::listarPorHeladera);
+        
         // Endpoint para eliminar todos los incidentes
         app.delete("/incidentes", incidentesController::eliminar);
 
